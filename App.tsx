@@ -97,10 +97,23 @@ const App: React.FC = () => {
             <p className="text-slate-600 mb-4">{classification.content}</p>
              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                {classification.types.map(c_type => (
-                 <div key={c_type.name} className="border p-4 rounded-lg">
-                   <h4 className="font-bold text-lg mb-2 text-slate-800">{c_type.name}</h4>
-                   <p className="text-slate-600 text-sm mb-2">{c_type.description}</p>
-                   {c_type.action && <div className={`p-3 rounded-md text-sm ${c_type.actionBgColor} ${c_type.actionTextColor}`}><strong>Aksiyon:</strong> {c_type.action}</div>}
+                 <div key={c_type.name} className="border p-4 rounded-lg flex flex-col justify-between">
+                   <div>
+                      <h4 className="font-bold text-lg mb-2 text-slate-800">{c_type.name}</h4>
+                      <p className="text-slate-600 text-sm mb-3">{c_type.description}</p>
+                      {c_type.criteria && (
+                        <div className="space-y-2 my-3">
+                          {c_type.criteria.map((crit, i) => (
+                            <div key={i} className="bg-slate-50 border-l-4 border-slate-300 p-3 rounded-r-lg">
+                              <p className="font-semibold text-sm text-slate-700">{crit.week}</p>
+                              <p className="text-sm text-slate-600">{crit.rule}</p>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {c_type.summary && <p className="text-slate-600 text-sm font-medium">{c_type.summary}</p>}
+                   </div>
+                   {c_type.action && <div className={`mt-4 p-3 rounded-md text-sm ${c_type.actionBgColor} ${c_type.actionTextColor}`}><strong>Aksiyon:</strong> {c_type.action}</div>}
                  </div>
                ))}
              </div>

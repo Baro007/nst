@@ -58,8 +58,23 @@ export const classification = {
     icon: "🤔",
     content: "Tüm bileşenleri analiz ettikten sonra, testin reaktivitesini sınıflandırırız.",
     types: [
-        { name: "Reaktif (Testi Geçti)", description: "Bazal hız normal, variyabilite orta, 20 dakikada en az 2 akselerasyon (15x15) var. Bu bebek güvende.", action: null },
-        { name: "Non-Reaktif (Testten Kaldı)", description: "20 dakikada yeterli akselerasyon yok.", action: "PANİK YOK! En sık neden fetal uykudur. Testi 20 dakika daha uzatın, anneyi hareket ettirin. Gerekirse anneye çikolata gibi küçük atıştırmalıklar verin (kontrendikasyon yoksa), O₂ desteği (4-6 lt/dk) başlayın ve anneyi sol yan veya yarı oturur (45°) pozisyona getirin. Hala non-reaktif ise Biyofiziksel Profil (BPP) gibi ileri değerlendirme gerekir.", actionBgColor: "bg-amber-100", actionTextColor: "text-amber-800"}
+        { 
+            name: "Reaktif (Testi Geçti)", 
+            description: "Bazal hızın normal ve variyabilitenin orta olması koşuluyla, 20 dakikalık bir periyotta yeterli akselerasyonun görülmesidir. Kriter gebelik haftasına göre değişir:",
+            criteria: [
+                { week: "≥32 Hafta", rule: "En az 2 adet, 15 saniye süren ve 15 vuru/dk artan akselerasyon (15x15 kuralı)." },
+                { week: "<32 Hafta", rule: "En az 2 adet, 10 saniye süren ve 10 vuru/dk artan akselerasyon (10x10 kuralı)." }
+            ],
+            summary: "Bu kriterlerin karşılanması bebeğin güvende olduğunu gösterir.",
+            action: null,
+        },
+        { 
+            name: "Non-Reaktif (Testten Kaldı)", 
+            description: "20 dakikada yeterli akselerasyon yok.", 
+            action: "PANİK YOK! En sık neden fetal uykudur. Testi 20 dakika daha uzatın, anneyi hareket ettirin. Gerekirse anneye çikolata gibi küçük atıştırmalıklar verin (kontrendikasyon yoksa), O₂ desteği (4-6 lt/dk) başlayın ve anneyi sol yan veya yarı oturur (45°) pozisyona getirin. Hala non-reaktif ise Biyofiziksel Profil (BPP) gibi ileri değerlendirme gerekir.", 
+            actionBgColor: "bg-amber-100", 
+            actionTextColor: "text-amber-800"
+        }
     ]
 };
 

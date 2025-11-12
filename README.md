@@ -1,10 +1,12 @@
 # Pratik NST Yorumlama Rehberi
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_BADGE_ID/deploy-status)](https://app.netlify.com/sites/YOUR_SITE_NAME/deploys)
+**[➡️ Canlı Demoyu Görüntüle](https://kadindogum.netlify.app/)**
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_BADGE_ID/deploy-status)](https://app.netlify.com/sites/kadindogum/deploys)
 
 Bu proje, özellikle aile hekimleri ve tıp öğrencileri için Non-Stres Testi (NST) yorumlama sanatında ustalaşmayı hedefleyen interaktif ve görsel olarak zengin bir rehberdir. Fetal iyilik halinin hızlı ve doğru bir şekilde değerlendirilmesi amacıyla NST'nin 5 temel bileşenine ve ACOG sınıflandırmalarına odaklanılmıştır.
 
-![Proje Ekran Görüntüsü](https-i-ibb-co-m6dhzlt-image.png)
+![Proje Ekran Görüntüsü](https://i.ibb.co/m6dhzlt/image.png)
 
 ## 🎯 Amaç
 
@@ -68,9 +70,9 @@ Bu proje, Netlify üzerinden kolayca ve ücretsiz bir şekilde yayınlanabilir.
     - **Build command:** `npm run build` (veya `vite build`)
     - **Publish directory:** `dist`
 
-    Bu ayarları onayladıktan sonra `Deploy site` düğmesine tıklayın. Netlify projenizi derleyecek ve size özel bir URL (`.netlify.app` uzantılı) üzerinden yayına alacaktır.
+    Bu ayarları onayladıktan sonra `Deploy site` düğmesine tıklayın. Netlify projenizi derleyecek ve **https://kadindogum.netlify.app/** adresinde yayına alacaktır.
 
-    **NOT:** İlk dağıtımdan sonra, Netlify ayarlarından yukarıdaki dağıtım durumu (deployment status) rozetinin ID'sini ve site adınızı alarak bu `README.md` dosyasını güncellemeyi unutmayın.
+    **NOT:** İlk dağıtımdan sonra, Netlify sitenizin ayarlarından yukarıdaki dağıtım durumu (deployment status) rozetindeki `YOUR_BADGE_ID` kısmını alarak bu `README.md` dosyasını güncelleyebilirsiniz.
 
 ## 👨‍💻 Proje Sahibi
 
