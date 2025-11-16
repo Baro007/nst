@@ -44,7 +44,7 @@ export const variability = {
 
 export const variabilityClasses = [
     { id: 'absent', name: "Kayıp (Absent)", range: "Saptanamaz", description: "Düz çizgi. Ciddi fetal hipoksi/asidoz için oldukça endişe vericidir.", icon: "!", iconColor: "text-red-500", bgColor: "bg-red-100/50" },
-    { id: 'minimal', name: "Minimal", range: "< 5 bpm", description: "Fetal uykudan kaynaklanabilir, ancak devam ederse deprese bir sinir sisteminin uyarı işaretidir.", icon: "⚠️", iconColor: "text-yellow-500", bgColor: "bg-yellow-100/50" },
+    { id: 'minimal', name: "Minimal", range: "≤ 5 bpm", description: "Fetal uykudan kaynaklanabilir, ancak devam ederse deprese bir sinir sisteminin uyarı işaretidir.", icon: "⚠️", iconColor: "text-yellow-500", bgColor: "bg-yellow-100/50" },
     { id: 'moderate', name: "Orta (Moderate)", range: "6 - 25 bpm", description: "Hedefimiz bu! Sağlıklı, iyi oksijenlenmiş ve nörolojik olarak sağlam bir fetüsü ifade eder.", icon: "✅", iconColor: "text-green-500", bgColor: "bg-green-100/50" },
     { id: 'marked', name: "Belirgin (Marked)", range: "> 25 bpm", description: "Anlamı belirsizdir, bazen fetal aktiviteye veya hipoksinin erken bir belirtisine bağlı olabilir.", icon: "❓", iconColor: "text-blue-500", bgColor: "bg-blue-100/50" }
 ];
