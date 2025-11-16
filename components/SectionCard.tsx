@@ -7,9 +7,10 @@ interface SectionCardProps {
   icon: string;
   children: React.ReactNode;
   isSubSection?: boolean;
+  id?: string;
 }
 
-export const SectionCard: React.FC<SectionCardProps> = ({ title, icon, children, isSubSection = false }) => {
+export const SectionCard: React.FC<SectionCardProps> = ({ id, title, icon, children, isSubSection = false }) => {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
 
   const titleClass = isSubSection 
@@ -17,7 +18,11 @@ export const SectionCard: React.FC<SectionCardProps> = ({ title, icon, children,
     : "text-3xl md:text-4xl font-bold text-blue-700";
 
   return (
-    <div ref={ref} className={`fade-in-section ${isVisible ? 'is-visible' : ''} bg-white p-6 rounded-xl shadow-lg`}>
+    <div 
+      id={id} 
+      ref={ref} 
+      className={`fade-in-section ${isVisible ? 'is-visible' : ''} bg-white p-6 rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-xl scroll-mt-24`}
+    >
       <h3 className={`${titleClass} mb-4 flex items-center`}>
         <span className="text-3xl mr-3">{icon}</span>
         {title}
