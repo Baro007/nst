@@ -2,9 +2,9 @@
 
 **[➡️ Canlı Demoyu Görüntüle](https://kadindogum.netlify.app/)**
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_BADGE_ID/deploy-status)](https://app.netlify.com/sites/kadindogum/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a9a478a5-d859-4d04-b638-71e86a0767e3/deploy-status)](https://app.netlify.com/sites/kadindogum/deploys)
 
-Bu proje, özellikle aile hekimleri ve tıp öğrencileri için Non-Stres Testi (NST) yorumlama sanatında ustalaşmayı hedefleyen interaktif ve görsel olarak zengin bir rehberdir. Fetal iyilik halinin hızlı ve doğru bir şekilde değerlendirilmesi amacıyla NST'nin 5 temel bileşenine ve ACOG sınıflandırmalarına odaklanılmıştır.
+Bu proje, Non-Stres Testi (NST) yorumlama sanatında ustalaşmayı hedefleyen interaktif ve görsel olarak zengin bir rehberdir. Fetal iyilik halinin hızlı ve doğru bir şekilde değerlendirilmesi amacıyla NST'nin 5 temel bileşenine ve ACOG sınıflandırmalarına odaklanılmıştır.
 
 ![Proje Ekran Görüntüsü](https://i.ibb.co/m6dhzlt/image.png)
 
@@ -20,6 +20,14 @@ NST, "Bebeğin İyilik Hali Testi" olarak bilinir. Bu rehberin amacı, sağlık 
 - **Pratik Özet Bilgiler:** "İyi İşaretler" ve "Kırmızı Bayraklar" gibi hızlı referans noktaları sunar.
 - **Modern ve Duyarlı Tasarım:** Her türlü cihazda (mobil, tablet, masaüstü) sorunsuz bir kullanıcı deneyimi sağlar.
 
+## 🌟 SEO & Erişilebilirlik
+
+Bu proje, en iyi web standartlarına uygun olarak geliştirilmiştir:
+- **Kapsamlı SEO:** Arama motorları tarafından kolayca keşfedilmesi için `title`, `description`, `canonical URL`, `Open Graph` ve `Twitter Card` gibi tüm gerekli meta etiketleri eklenmiştir.
+- **Yapılandırılmış Veri (JSON-LD):** Sitenin bir "Eğitim Kaynağı" olarak tanınmasını sağlayan `Schema.org` işaretlemesi içerir. Bu, arama motorlarının ve yapay zekanın içeriği daha derinlemesine anlamasına yardımcı olur.
+- **Tarama Dostu:** Arama motoru botlarını yönlendirmek için `robots.txt` ve `sitemap.xml` dosyaları oluşturulmuştur.
+- **Erişilebilirlik:** Anlamsal HTML etiketleri ve `aria-label` gibi özellikler kullanılarak ekran okuyucu kullanıcıları için erişilebilirlik sağlanmıştır.
+
 ## 🛠️ Kullanılan Teknolojiler
 
 - **React:** Kullanıcı arayüzü için modern bir JavaScript kütüphanesi.
@@ -33,12 +41,12 @@ Projeyi kendi bilgisayarınızda kurmak ve geliştirmek için aşağıdaki adım
 
 1.  **Depoyu Klonlayın:**
     ```bash
-    git clone https://github.com/kullanici-adiniz/proje-adiniz.git
+    git clone https://github.com/Baro007/nst.git
     ```
 
 2.  **Proje Dizinine Gidin:**
     ```bash
-    cd proje-adiniz
+    cd nst
     ```
 
 3.  **Gerekli Paketleri Yükleyin:**
@@ -70,9 +78,7 @@ Bu proje, Netlify üzerinden kolayca ve ücretsiz bir şekilde yayınlanabilir.
     - **Build command:** `npm run build` (veya `vite build`)
     - **Publish directory:** `dist`
 
-    Bu ayarları onayladıktan sonra `Deploy site` düğmesine tıklayın. Netlify projenizi derleyecek ve **https://kadindogum.netlify.app/** adresinde yayına alacaktır.
-
-    **NOT:** İlk dağıtımdan sonra, Netlify sitenizin ayarlarından yukarıdaki dağıtım durumu (deployment status) rozetindeki `YOUR_BADGE_ID` kısmını alarak bu `README.md` dosyasını güncelleyebilirsiniz.
+    Bu ayarları onayladıktan sonra `Deploy site` düğmesine tıklayın. Netlify projenizi derleyecek ve sitenizi yayına alacaktır.
 
 ## 👨‍💻 Proje Sahibi
 

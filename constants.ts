@@ -1,4 +1,3 @@
-
 export const introduction = {
     title: "Hekimler için Pratik NST Yorumlama",
     icon: "🎯",
@@ -23,10 +22,25 @@ export const baselineRate = {
 };
 
 export const variability = {
-    title: "3. Variyabilite",
+    title: "3. Variyabilite: Bebeğin Beyin Aktivitesi",
     icon: "〰️",
-    content: "Bu, bebeğin iyilik halini gösteren EN KRİTİK parametredir. Bazal hız çizgisindeki 'pürüzlü' dalgalanmadır ve sempatik ile parasempatik sistemin anlık mücadelesini yansıtır. Sağlıklı bir otonom sinir sisteminin göstergesidir."
+    content: "Bu, fetal iyilik halini gösteren EN KRİTİK parametredir. Bazal hız çizgisindeki bu 'pürüzlü' dalgalanma, bebeğin otonom sinir sisteminin (sempatik 'gaz' ve parasempatik 'fren' pedalları) sağlıklı bir şekilde çalıştığının ve yeterli oksijen aldığının anlık bir kanıtıdır. Pürüzlü bir çizgi, uyanık ve sağlıklı bir beyin demektir.",
+    measurement: {
+        title: "Peki, Variyabilite Nasıl Ölçülür?",
+        description: "Variyabiliteyi ölçmek hassas bir cetvel gerektirmez; bu, görsel bir değerlendirmedir. Akselerasyon ve deselerasyonlar dışındaki 10 dakikalık bir trase segmentine odaklanılır.",
+        steps: [
+            {
+                step: "1. Hayali Bant Çizin",
+                detail: "Gözünüzle, bazal hız çizgisinin pürüzlü hareketinin en tepesinden ve en altından geçen iki yatay çizgi hayal edin."
+            },
+            {
+                step: "2. Aralığı Tahmin Edin",
+                detail: "Bu iki hayali çizgi arasındaki dikey mesafeyi (genliği) vuru/dakika (bpm) cinsinden tahmin edin. İşte bu tahmin, variyabilitenin değeridir."
+            }
+        ]
+    }
 };
+
 
 export const variabilityClasses = [
     { id: 'absent', name: "Kayıp (Absent)", range: "Saptanamaz", description: "Düz çizgi. Ciddi fetal hipoksi/asidoz için oldukça endişe vericidir.", icon: "!", iconColor: "text-red-500", bgColor: "bg-red-100/50" },
