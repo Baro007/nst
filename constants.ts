@@ -39,7 +39,11 @@ export const uterineActivity = {
     content: React.createElement(React.Fragment, null, 
         "İlk olarak alttaki (",
         G('TOCO'),
-        ") çizgide düzenli kasılmalar olup olmadığına bakılır. Kasılmalar, bebeğe giden kan akımını geçici olarak azaltan 'stres' anlarıdır. Bebeğin bu strese verdiği yanıtı (yavaşlamaları) görmek için sancı olup olmadığını bilmeliyiz."
+        ") çizgide düzenli kasılmalar olup olmadığına bakılır. Kasılmalar, bebeğe giden kan akımını geçici olarak azaltan 'stres' anlarıdır. Bebeğin bu strese verdiği yanıtı (yavaşlamaları) görmek için sancı olup olmadığını bilmeliyiz.",
+        React.createElement("div", { className: "mt-4 p-3 bg-amber-50 dark:bg-slate-800 border-l-4 border-amber-500 text-amber-900 dark:text-amber-200 rounded-r-lg text-sm" },
+            React.createElement("strong", null, "Klinik Kriter - Takisistol (Tachysystole): "),
+            "10 dakikalık sürede ortalama 5'ten fazla uterus kasılması olması durumudur. Bebeğin kasılmalar arasında dinlenmesine ve plasentadan oksijen almasına engel olur. Hidrasyon sağlanmalı, Oksitosin kapatılmalı ve gerekirse tokolitik tedavi düşünülmelidir."
+        )
     )
 };
 
@@ -99,7 +103,9 @@ export const decelerations = {
     types: [
         { id: "early", name: "Erken Deselerasyon (İyi Huylu)", appearance: "Sancı ile birebir aynı anda başlar, sancı bitince biter (ayna görüntüsü).", meaning: React.createElement(React.Fragment, null, "Fetal baş basısı (", G('vagal refleks'), "). Tehlikeli değildir."), borderColor: "border-green-500" },
         { id: "late", name: "Geç Deselerasyon (Kötü Huylu)", appearance: "Sancının tepe noktasından sonra başlar ve sancı bittikten sonra bile devam eder.", meaning: React.createElement(React.Fragment, null, G('Uteroplasental Yetmezlik'), ". Plasenta, stres anında bebeğe yeterli kanı/oksijeni gönderemiyor. ", G('fetal hipoksi'), "nin en net işaretidir."), borderColor: "border-red-500" },
-        { id: "variable", name: "Değişken Deselerasyon (En Sık Görülen)", appearance: "Sancıdan bağımsız, ani, 'V' şeklinde keskin inişler.", meaning: React.createElement(React.Fragment, null, G('Kordon basısı'), ". Genelde tehlikeli değildir ancak sık, derin ve tekrarlayıcı hale gelirse ciddiye alınmalıdır."), borderColor: "border-yellow-500" }
+        { id: "variable", name: "Değişken Deselerasyon (En Sık Görülen)", appearance: "Sancıdan bağımsız, ani, 'V' şeklinde keskin inişler.", meaning: React.createElement(React.Fragment, null, G('Kordon basısı'), ". Genelde tehlikeli değildir ancak sık, derin ve tekrarlayıcı hale gelirse ciddiye alınmalıdır."), borderColor: "border-yellow-500" },
+        { id: "prolonged", name: "Uzatmış Deselerasyon (Ciddi / Alarm)", appearance: "Kalp hızında en az 15 bpm düşüşün, en az 2 dakika sürmesi ama 10 dakikayı aşmamasıdır.", meaning: React.createElement(React.Fragment, null, "Fetal oksijenlenmede ani ve uzun süreli azalma. ", G('intrauterin resüsitasyon'), " başlanmalı, düzelmezse acil sezaryen hazırlığı yapılmalıdır."), borderColor: "border-orange-500" },
+        { id: "sinusoidal", name: "Sinüzoidal Patern (Patolojik / Acil!)", appearance: "Sancılardan bağımsız, son derece düzenli ve pürüzsüz dalga (sinüs dalgası) görünümüdür. Variyabilite kaybolmuştur.", meaning: React.createElement(React.Fragment, null, "Ciddi fetal anemi, ağır ", G('fetal hipoksi'), " veya ", G('asidoz'), " belirtisidir. Kategori III'tür ve acil C/S ile doğum gerektirir."), borderColor: "border-red-600" }
     ]
 };
 
@@ -145,3 +151,137 @@ export const summary = {
     badSigns: React.createElement(React.Fragment, null, "En tehlikeli iki 'kötü' işaret: Kayıp Variyabilite (düz çizgi) ve Geç Deselerasyonlar (sancıdan sonra yavaşlama)."),
     nonReactiveNote: "Bir trase 'Non-Reaktif' ise, hemen paniklemeyin; muhtemelen bebek uyuyordur."
 };
+
+export const quizCases = [
+  {
+    id: "case-1",
+    title: "Vaka 1: Rutin Gebelik Kontrolü",
+    gestationalWeek: "38. Hafta",
+    description: "38 haftalık gebe rutin gebelik kontrolünde NST'ye bağlanıyor. Herhangi bir şikayeti olmayan annenin NST trasesi inceleniyor. Bazal kalp hızı 140 bpm civarında seyrediyor, orta (moderate) variyabiliteye sahip. 20 dakikalık izlemde bazal hızdan 15 vuru yükselen ve 20 saniye süren 3 adet hızlanma (akselerasyon) gözlenirken, hiçbir yavaşlama (deselerasyon) saptanmıyor.",
+    traceType: "normal",
+    variabilityType: "moderate",
+    baselineBpm: 140,
+    questions: [
+      {
+        id: "c1-q1",
+        question: "Trasedeki Bazal Kalp Hızı sınıflandırması nedir?",
+        options: ["Bradikardi (<110 bpm)", "Normal (110 - 160 bpm)", "Taşikardi (>160 bpm)"],
+        correctIndex: 1,
+        explanation: "140 bpm, ACOG rehberlerine göre 110-160 bpm olan normal sınırlar içerisindedir ve fetal iyilik halinin temel göstergelerindendir."
+      },
+      {
+        id: "c1-q2",
+        question: "Trasedeki Variyabilite durumu hangisidir?",
+        options: ["Kayıp (Absent) - Düz Çizgi", "Minimal (≤ 5 bpm)", "Orta (Moderate) (6 - 25 bpm)", "Belirgin (Marked) (> 25 bpm)"],
+        correctIndex: 2,
+        explanation: "Pürüzlü dalgalanmanın genişliği 6 ila 25 bpm arasında olduğundan 'Orta (Moderate)' olarak değerlendirilir. Bu durum nörolojik olarak sağlıklı bir bebeği temsil eder."
+      },
+      {
+        id: "c1-q3",
+        question: "Akselerasyon ve Deselerasyon varlığına göre testi yorumlayın:",
+        options: [
+          "Akselerasyon yok, test reaktiftir",
+          "Yeterli akselerasyon var, deselerasyon yok. Test REAKTİF'tir.",
+          "Deselerasyon var, test non-reaktiftir"
+        ],
+        correctIndex: 1,
+        explanation: "32 haftadan büyük gebelikte 20 dakikada en az 2 adet 15x15 kuralına uyan akselerasyon görülmesi ve deselerasyon olmaması trasiyi 'Reaktif' yapar."
+      },
+      {
+        id: "c1-q4",
+        question: "Bu trase ACOG sınıflamasına göre hangi Kategoriye girer ve yönetim nasıl olmalıdır?",
+        options: [
+          "Kategori I - Rutin gebelik takibine devam edilir.",
+          "Kategori II - Intrauterin resüsitasyon başlanır, anne eve gönderilmez.",
+          "Kategori III - Acil sezaryen ile bebek doğurtulur."
+        ],
+        correctIndex: 0,
+        explanation: "Normal bazal hız (140), orta variyabilite ve deselerasyon olmaması Kategori I (Normal / Güven verici) tanımıyla birebir eşleşir. Yaklaşım rutin takiptir."
+      }
+    ]
+  },
+  {
+    id: "case-2",
+    title: "Vaka 2: Bebek Hareketlerinde Azalma & Preeklampsi",
+    gestationalWeek: "39. Hafta",
+    description: "39 haftalık preeklamptik (gebelik zehirlenmesi) gebe, bebek hareketlerinde azalma şikayetiyle başvuruyor. NST trasesinde bazal kalp hızı 145 bpm'dir. Çizgi genel olarak oldukça pürüzsüz görünmekte ve dalgalanma genliği 3 bpm civarında (minimal) seyretmektedir. Ayrıca, TOCO cihazının kaydettiği her sancı dalgasının tepe noktasından yaklaşık 20 saniye sonra başlayan, sancı bittikten sonra bile devam eden 15-20 bpm'lik yavaşlamalar saptanıyor.",
+    traceType: "late",
+    variabilityType: "minimal",
+    baselineBpm: 145,
+    questions: [
+      {
+        id: "c2-q1",
+        question: "Trasede sancıların tepe noktasından sonra başlayan ve sancı bittikten sonra da süren deselerasyon tipi hangisidir?",
+        options: ["Erken Deselerasyon (Baş Basısı)", "Değişken Deselerasyon (Kordon Basısı)", "Geç Deselerasyon (Uteroplasental Yetmezlik)"],
+        correctIndex: 2,
+        explanation: "Sancının zirvesinden sonra gecikmeli olarak başlayan ve sancı bitiminden sonra devam eden düşüşler 'Geç Deselerasyon'dur. Uteroplasental yetmezlik ve fetal hipoksiyi gösterir."
+      },
+      {
+        id: "c2-q2",
+        question: "Trasedeki variyabilitenin 3 bpm olması ne anlama gelir?",
+        options: [
+          "Orta variyabilite - Bebek çok hareketlidir.",
+          "Minimal variyabilite - Bebek uykuda olabilir veya hipoksiye bağlı santral sinir sistemi depresyonu başlamış olabilir.",
+          "Kayıp variyabilite - Asidoz kesinleşmiştir."
+        ],
+        correctIndex: 1,
+        explanation: "Genlik 5 bpm'in altında olduğundan 'Minimal' variyabilitedir. Preeklampsi zemininde geç deselerasyonlarla birlikteliği, fetal uykudan ziyade asidoz öncesi hipoksiyi düşündürmelidir."
+      },
+      {
+        id: "c2-q3",
+        question: "Bu trase ACOG sınıflamasına göre hangi Kategoriye girer?",
+        options: ["Kategori I (Normal)", "Kategori II (Şüpheli / Araf)", "Kategori III (Patolojik)"],
+        correctIndex: 1,
+        explanation: "Kategori III olması için kayıp (absent) variyabilite ile birlikte tekrarlayan geç/değişken deselerasyonlar olması gerekir. Burada variyabilite minimal (sıfır değil) olduğundan Kategori II'dir."
+      },
+      {
+        id: "c2-q4",
+        question: "Bu hastaya ilk yapılması gereken klinik yaklaşım (yönetim) ne olmalıdır?",
+        options: [
+          "Rutin takip önerilip hasta eve gönderilir.",
+          "Intrauterin resüsitasyon başlanır (Sol yan pozisyon, O2, hidrasyon), sancı yapıcı ilaç varsa kapatılır ve yakın takiple doğum planlanır.",
+          "Hemen ameliyathaneye alınıp 5 dakika içinde sezaryen yapılır."
+        ],
+        correctIndex: 1,
+        explanation: "Kategori II traselerde ilk adım intrauterin resüsitasyondur. Anne sol yana yatırılır, sıvı başlanır, O2 verilir. Trase düzelmezse veya kötüleşirse doğum kararı alınır. Eve gönderilemez."
+      }
+    ]
+  },
+  {
+    id: "case-3",
+    title: "Vaka 3: Kan Uyuşmazlığı & Şiddetli Trase",
+    gestationalWeek: "35. Hafta",
+    description: "Rh uygunsuzluğu (kan uyuşmazlığı) tanısı olan ve takiplere düzensiz gelen 35 haftalık gebe polikliniğe başvuruyor. NST trasesinde bazal kalp hızı 130 bpm olarak belirleniyor. Trasede akselerasyon veya deselerasyon bulunmuyor; ancak kalp hızı çizgisi, 20 dakikadır devam eden, dakikada 3-4 kez tekrarlayan ve genliği 12 bpm olan son derece pürüzsüz ve düzenli bir sinüs dalgası çiziyor.",
+    traceType: "sinusoidal",
+    variabilityType: "absent",
+    baselineBpm: 130,
+    questions: [
+      {
+        id: "c3-q1",
+        question: "Trasede görülen bu pürüzsüz, düzenli sinüs dalgası şeklindeki özel paterne ne ad verilir?",
+        options: ["Uzatmış Deselerasyon", "Sinüzoidal Patern", "Bradikardi atağı"],
+        correctIndex: 1,
+        explanation: "Düzenli, pürüzsüz dalgalanma (sinüs dalgası) görünümü 'Sinüzoidal Patern'dir. Fetal anemi veya ağır hipoksiyi gösteren nadir ama çok tehlikeli bir bulgudur."
+      },
+      {
+        id: "c3-q2",
+        question: "Sinüzoidal patern saptanan bir trase ACOG sınıflamasına göre hangi kategoridedir?",
+        options: ["Kategori I (Normal)", "Kategori II (Şüpheli)", "Kategori III (Patolojik / Acil!)"],
+        correctIndex: 2,
+        explanation: "ACOG rehberine göre sinüzoidal patern saptanması, variyabilitenin kaybolması ile beraber en ağır fetal distress göstergesidir ve Kategori III olarak sınıflandırılır."
+      },
+      {
+        id: "c3-q3",
+        question: "Kan uyuşmazlığı olan bu gebede sinüzoidal paternin en olası nedeni ve klinik yaklaşım ne olmalıdır?",
+        options: [
+          "Bebek uyuyordur, uyanması için çikolata yedirip test uzatılmalıdır.",
+          "Ciddi fetal anemi (bebekte ağır kansızlık / hidrops). Vakit kaybetmeden acil C/S ile doğum yapılmalıdır.",
+          "Kordon basısı vardır, anne sağ yanına döndürülüp takip edilir."
+        ],
+        correctIndex: 1,
+        explanation: "Kan uyuşmazlığı zemininde sinüzoidal patern ciddi fetal anemiye (bebeğin alyuvarlarının yıkılmasına) işaret eder. Bebek ağır hipoksi ve asidoz riski altındadır; acil doğum (C/S) şarttır."
+      }
+    ]
+  }
+];
+

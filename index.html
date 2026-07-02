@@ -6,10 +6,16 @@
     
     <!-- SEO Meta Tags -->
     <title>Pratik NST Yorumlama Rehberi | Hekimler İçin İnteraktif Eğitim</title>
-    <meta name="description" content="NST (Non-Stres Testi) yorumlama sanatında ustalaşın. Bu interaktif rehber, fetal iyilik halini değerlendirmek için 5 temel bileşeni, ACOG kategorilerini ve pratik ipuçlarını görselleştirmelerle sunar. Tıp profesyonelleri için ideal bir eğitim aracı." />
-    <meta name="keywords" content="NST, Non-Stres Testi, NST Yorumlama, Kardiyotokografi, Fetal Sağlık, Gebelik Takibi, Kadın Doğum, Tıp Eğitimi, ACOG, Reaktif NST, Non-Reaktif NST" />
+    <meta name="description" content="NST (Non-Stres Testi) yorumlama sanatında ustalaşın. Fetal iyilik halini değerlendiren 5 bileşen, ACOG kategorileri, interaktif canı monitör simülatörü ve hekimler için interaktif NST vaka analiz testi." />
+    <meta name="keywords" content="NST, Non-Stres Testi, NST Yorumlama, Kardiyotokografi, Fetal Sağlık, Gebelik Takibi, Kadın Doğum, Tıp Eğitimi, ACOG, Reaktif NST, Non-Reaktif NST, Uzatmış Deselerasyon, Takisistol, NST Quiz" />
     <meta name="author" content="Dr. Sadık Barış Adıgüzel" />
     <link rel="canonical" href="https://kadindogum.netlify.app/" />
+
+    <!-- Geolocation Metadata (Geo & ICBM Tags) -->
+    <meta name="geo.region" content="TR-07" />
+    <meta name="geo.placename" content="Antalya" />
+    <meta name="geo.position" content="36.884809;30.672851" />
+    <meta name="ICBM" content="36.884809, 30.672851" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -17,7 +23,7 @@
 
     <!-- Open Graph Meta Tags (for social media sharing) -->
     <meta property="og:title" content="Pratik NST Yorumlama Rehberi | Hekimler İçin İnteraktif Eğitim" />
-    <meta property="og:description" content="NST yorumlama sanatında ustalaşın. Fetal iyilik halini değerlendirmek için 5 temel bileşeni, ACOG kategorilerini ve pratik ipuçlarını interaktif olarak öğrenin." />
+    <meta property="og:description" content="NST yorumlama sanatında ustalaşın. Fetal iyilik halini değerlendirmek için 5 temel bileşeni, ACOG kategorilerini, canlı monitörü ve vakalı testi interaktif olarak öğrenin." />
     <meta property="og:image" content="https://i.ibb.co/m6dhzlt/image.png" />
     <meta property="og:url" content="https://kadindogum.netlify.app/" />
     <meta property="og:type" content="website" />
@@ -26,11 +32,16 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Pratik NST Yorumlama Rehberi | Hekimler İçin İnteraktif Eğitim" />
-    <meta name="twitter:description" content="NST yorumlama sanatında ustalaşın. Fetal iyilik halini değerlendirmek için 5 temel bileşeni, ACOG kategorilerini ve pratik ipuçlarını interaktif olarak öğrenin." />
+    <meta name="twitter:description" content="NST yorumlama sanatında ustalaşın. Fetal iyilik halini değerlendiren 5 bileşeni, ACOG kategorilerini ve pratik vakaları interaktif olarak öğrenin." />
     <meta name="twitter:image" content="https://i.ibb.co/m6dhzlt/image.png" />
 
     <!-- Fonts and Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class'
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -60,18 +71,47 @@
     }
     </script>
 
-    <!-- Structured Data (JSON-LD for Rich Snippets) -->
+    <!-- Structured Data (JSON-LD for Rich Snippets & AI Engines) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LearningResource",
-      "name": "Pratik NST Yorumlama Rehberi",
-      "description": "NST (Non-Stres Testi) yorumlama sanatında ustalaşın. Bu interaktif rehber, fetal iyilik halini değerlendirmek için 5 temel bileşeni, ACOG kategorilerini ve pratik ipuçlarını görselleştirmelerle sunar. Tıp profesyonelleri için ideal bir eğitim aracı.",
+      "@type": "MedicalWebPage",
+      "@id": "https://kadindogum.netlify.app/#webpage",
       "url": "https://kadindogum.netlify.app/",
-      "image": "https://i.ibb.co/m6dhzlt/image.png",
+      "name": "Pratik NST Yorumlama Rehberi | Hekimler İçin İnteraktif Eğitim",
+      "description": "NST (Non-Stres Testi) yorumlama sanatında ustalaşın. Fetal iyilik halini değerlendiren 5 bileşen, ACOG kategorileri, interaktif canlı monitör simülatörü ve hekimler için interaktif NST vaka analiz testi.",
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "Fetal Distress",
+        "code": {
+          "@type": "MedicalCode",
+          "code": "ICD-10: O76",
+          "codingSystem": "ICD-10"
+        }
+      },
+      "aspect": ["Diagnosis", "Management", "Education"],
+      "medicalSpecialty": "ObstetricsAndGynecology",
+      "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "MedicalProfessional",
+        "geographicArea": {
+          "@type": "AdministrativeArea",
+          "name": "Turkey"
+        }
+      },
       "author": {
         "@type": "Person",
-        "name": "Dr. Sadık Barış Adıgüzel"
+        "name": "Dr. Sadık Barış Adıgüzel",
+        "jobTitle": "Resident Physician in Family Medicine",
+        "worksFor": {
+          "@type": "Hospital",
+          "name": "Antalya Training and Research Hospital",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Antalya",
+            "addressCountry": "TR"
+          }
+        }
       },
       "publisher": {
         "@type": "Organization",
@@ -81,11 +121,11 @@
           "url": "https://kadindogum.netlify.app/logo.svg"
         }
       },
-      "learningResourceType": ["Interactive Guide", "Educational Resource"],
-      "educationalUse": ["Medical Education", "Professional Development"],
+      "educationalUse": ["Medical Education", "Residency Training", "Clinical Decision Support"],
+      "learningResourceType": ["Interactive Diagram", "Self-Assessment", "Case Study"],
       "inLanguage": "tr-TR",
       "isAccessibleForFree": true,
-      "keywords": "NST, Non-Stres Testi, Kardiyotokografi, Fetal Sağlık, Gebelik, Tıp Eğitimi"
+      "keywords": "NST, Non-Stres Testi, Kardiyotokografi, Fetal Sağlık, Gebelik, Tıp Eğitimi, ACOG Kategorileri, Reaktif NST, Uzatmış Deselerasyon, Takisistol"
     }
     </script>
   </head>
